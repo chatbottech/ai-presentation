@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Algorithms and Architecture for Real-time Recommendations at News UK</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/news.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,6 +24,14 @@
 	<body>
 		<div class="reveal">
 		  <div class="slides">
+		    <section><h2>Algorithms and Architecture<br>for Real-time Recommendations <br>at News UK</h2></section>
+		    <section>
+		      <ul>
+			<li> Dion Bailey and Tom Pajak (News UK)
+			<li> Daoud Clarke (Hyperparameter Ltd.)
+			<li> Carlos Rodriguez (Kainano Ltd.)
+		      </ul>
+		    </section>
 		    <section><h1>Overview</h1></section>
 		    <section>
 		      <ul>
@@ -46,15 +54,52 @@
 		    </section>
 
 		    <section><h1>Motivation</h1></section>
+		    <section>Matrix factorization has many applications</section>
+		    <section>Algorithms are highly developed</section>
+
+		    <section><h1>Motivation at News UK</h1></section>
 		    <section>Personalisation can improve engagement and retention</section>
 		    <section>Need to do this at scale for <i>The Times</i> and <i>The Sun</i></section>
 		    <section>Needs to be fast</section>
 		    <section>Existing algorithms and systems are not suitable</section>
 
-		    <section><h1>Background</h1></section>
-		    <section></section>
+		    <section><h1>Related Work</h1></section>
+		    <section>
+		      <ul>
+			<li> <b>Stream-Ranking Matrix Factorization</b>
+			<li> Diaz-Aviles et al. (2012)
+			<li> Users and items must be specified in advance
+		      </ul>
+		    </section>
 		    
+		    <section>
+		      <ul>
+			<li> <b>xStreams</b>
+			<li> Siddiqui et al. (2014)
+			<li> New users and items can be specified
+			<li> Not using state-of-the-art matrix factorization algorithms
+		      </ul>
+		    </section>
 		    
+		    <section>
+		      <ul>
+			<li> <b>YouTube</b>
+			<li> Covington et al. (2016)
+			<li> Deep learning model using Tensorflow
+			<li> Real-time aspect not described
+		      </ul>
+		    </section>
+		    
+		    <section><h1>Algorithms</h1></section>
+
+		    <section><img width="600" src="img/macron-features.png"></section>
+		    <section><img width="600" src="img/matrix-factorization-remove-user.png"></section>
+		    <section><img width="600" src="img/algorithm.png"></section>
+
+		    <section><h1>Experiments</h1></section>
+		    <section><img width="600" src="img/batch-sizes.png"></section>
+		    <section><img width="600" src="img/parallel-batches.png"></section>
+
 		    <section>
 		      <ul>
 			<li> 
@@ -65,13 +110,6 @@
 			<li> 
 		      </ul>
 		    </section>
-
-		    <section><img width="600" src="img/macron-features.png"></section>
-		    <section><img width="600" src="img/matrix-factorization-remove-user.png"></section>
-		    <section><img width="600" src="img/algorithm.png"></section>
-		    <section><img width="600" src="img/batch-sizes.png"></section>
-		    <section><img width="600" src="img/parallel-batches.png"></section>
-		    <section>Slide 2</section>
 		  </div>
 		</div>
 
