@@ -24,7 +24,10 @@
 	<body>
 		<div class="reveal">
 		  <div class="slides">
-		    <section><h2>Algorithms and Architecture<br>for Real-time Recommendations <br>at News UK</h2></section>
+		    <section>
+		      <h2>Algorithms and Architecture<br>for Real-time Recommendations <br>at News UK</h2>
+		      <img width="700" src="img/news-uk.png">
+		    </section>
 		    <section>
 		      <ul>
 			<li> Dion Bailey and Tom Pajak (News UK)
@@ -54,8 +57,19 @@
 		    </section>
 
 		    <section><h1>Motivation</h1></section>
-		    <section>Matrix factorization has many applications</section>
+		    <section>Matrix factorization finds relationships</section>
+		    <section>Lots of applications</section>
+		    <section>
+		      <ul>
+			<li> Recommendations
+			<li> Word meaning similarity (LSA)
+			<li> Personalised search
+			<li> Feature extraction
+			<li> Missing value estimation
+		      </ul>
+		    </section>
 		    <section>Algorithms are highly developed</section>
+		    <section><img width="600" src="img/netflix-prize.png"></section>
 
 		    <section><h1>Motivation at News UK</h1></section>
 		    <section>Personalisation can improve engagement and retention</section>
@@ -93,6 +107,7 @@
 		    <section><h1>Algorithms</h1></section>
 
 		    <section><img width="600" src="img/macron-features.png"></section>
+		    <section><img width="600" src="img/matrix-factorization.png"></section>
 		    <section><img width="600" src="img/matrix-factorization-remove-user.png"></section>
 		    <section><img width="600" src="img/algorithm.png"></section>
 
@@ -100,16 +115,19 @@
 		    <section><img width="600" src="img/batch-sizes.png"></section>
 		    <section><img width="600" src="img/parallel-batches.png"></section>
 
+		    <section><h1>Architecture</h1></section>
+		    <section><img src="img/recs-architecture.png"></section>
+		    
+		    <section><h1>Conclusion</h1></section>
 		    <section>
 		      <ul>
-			<li> 
-			<li> 
-			<li> 
-			<li> 
-			<li> 
-			<li> 
+			<li> Matrix factorisation is useful
+			<li> Update an existing factorisation using batches
+			<li> Parallelise batch updates
 		      </ul>
 		    </section>
+		    
+		    <section><h1>Thanks!</h1></section>
 		  </div>
 		</div>
 
