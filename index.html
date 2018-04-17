@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Algorithms and Architecture for Real-time Recommendations at News UK</title>
+		<title>Recommending quickly and chatbot personalisation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/news.css">
@@ -25,53 +25,35 @@
 		<div class="reveal">
 		  <div class="slides">
 		    <section>
-		      <h2>Algorithms and Architecture<br>for Real-time Recommendations <br>at News UK</h2>
-		      <img width="700" src="img/news-uk.png">
+		      <h3>Recommending Quickly &</h3>
+		      <h3>Chatbot personalisation</h3>
+		      <img height="300" src="img/hyperparameter-logo.svg">
+		      <p>Daoud Clarke</p>
+		      <p>Hyperparameter Limited</p>
 		    </section>
 		    <section>
+		      <h2>Collaborators</h2>
 		      <ul>
 			<li> Dion Bailey and Tom Pajak (News UK)
-			<li> Daoud Clarke (Hyperparameter Ltd.)
 			<li> Carlos Rodriguez (Kainano Ltd.)
 		      </ul>
 		    </section>
 		    <section><h1>Overview</h1></section>
 		    <section>
 		      <ul>
-			<li> Motivation
-			<li> Related work
-			<li> Background
-		      </ul>
-		    </section>
-		    <section>
-		      <ul>
-			<li> Real-time Content-based recommendations
-			<li> An Algorithm for Incremental Updates to Matrix Factorization
-			<li> Evaluation
-		      </ul>
-		    </section>
-		    <section>
-		      <ul>
+			<li>  Motivation, related work, background
+			<li> Algorithms
+			  <ul>
+			    <li> Real-time content-based recommendations
+			    <li> An algorithm for incremental updates to matrix factorization
+			    <li> Evaluation
+			  </ul>
 			<li> Architecture
+			<li> Application to chatbots
 		      </ul>
 		    </section>
 
 		    <section><h1>Motivation</h1></section>
-		    <section>Matrix factorization finds relationships</section>
-		    <section>Lots of applications</section>
-		    <section>
-		      <ul>
-			<li> Recommendations
-			<li> Word meaning similarity (LSA)
-			<li> Personalised search
-			<li> Feature extraction
-			<li> Missing value estimation
-		      </ul>
-		    </section>
-		    <section>Algorithms are highly developed</section>
-		    <section><img width="600" src="img/netflix-prize.png"></section>
-
-		    <section><h1>Motivation at News UK</h1></section>
 		    <section>Personalisation can improve engagement and retention</section>
 		    <section>Need to do this at scale for <i>The Times</i> and <i>The Sun</i></section>
 		    <section>Needs to be fast</section>
@@ -117,13 +99,31 @@
 
 		    <section><h1>Architecture</h1></section>
 		    <section><img src="img/recs-architecture.png"></section>
-		    
+
+		    <section><h1>Application: chatbots</h1></section>
+		    <section>
+		      <ul>
+			<li> I'd like a pizza.
+			<li> <i> Ok - the aubergine parmigiana again?
+			The portobello mushroom and truffle is also
+			good.</i>
+			<li> Ok, let's try the mushroom.
+			<li> <i> Great. The buffalo mozzarella and
+			smoked tomato salad goes well with that.</i>
+			<li> No thanks.
+			<li> <i> Do you want a Coke to drink like last
+			time? The San Pellegrino Orange is also
+			    popular.</i>
+			<li> Just the Coke, thanks.
+		      </ul>
+		    </section>
+
 		    <section><h1>Conclusion</h1></section>
 		    <section>
 		      <ul>
 			<li> Matrix factorisation is useful
 			<li> Update an existing factorisation using batches
-			<li> Parallelise batch updates
+			<li> Chatbots need personalisation
 		      </ul>
 		    </section>
 		    
