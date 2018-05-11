@@ -11,14 +11,20 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
+  font-family: 'Bangers', cursive;
   background: #222;
   background-color: #222; }
 
 .reveal {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
   font-size: 42px;
   font-weight: normal;
   color: #fff; }
+
+/* img { */
+/*     border: none; */
+/*     box-shadow: none; */
+/* } */
 
 ::selection {
   color: #fff;
@@ -46,8 +52,8 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 600;
+  /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
+  /* font-weight: 600; */
   line-height: 1.2;
   letter-spacing: normal;
   /* text-transform: uppercase; */
@@ -117,7 +123,8 @@ body {
   margin-left: 40px; }
 
 .reveal dt {
-  font-weight: bold; }
+    /* font-weight: bold; */
+}
 
 .reveal dd {
   margin-left: 40px; }
@@ -168,7 +175,8 @@ body {
   border-spacing: 0; }
 
 .reveal table th {
-  font-weight: bold; }
+    /* font-weight: bold; */
+}
 
 .reveal table th,
 .reveal table td {
@@ -229,7 +237,8 @@ body {
   margin: 15px 0px;
   background: none;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
+}
 
 .reveal section img.plain {
   border: 0;

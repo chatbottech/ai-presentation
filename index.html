@@ -4,14 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Recommending quickly and chatbot personalisation</title>
+		<title>An introduction to AI, personalisation, and chatbots</title>
 
+		<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/news.css">
-
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-
+		
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -25,116 +23,119 @@
 		<div class="reveal">
 		  <div class="slides">
 		    <section>
-		      <h3>Recommending Quickly</h3>
-		      <img height="300" src="img/hyperparameter-logo.svg">
-		      <p>Daoud Clarke</p>
-		      <p>Hyperparameter Limited</p>
+		      <h3>An introduction to AI, personalisation, and chatbots</h3>
+		      <img height="300" src="img/chatbottech-face.png">
+		      <p>Daoud Clarke, <a href="https://chatbottech.io">ChatbotTech.io</a></p>
 		    </section>
+
+		    <section><h3>Normally my presentations look like this...</h3>
+		      <img class="stretch" src="img/math.gif">
+		    </section>
+		    
+		    <section><h3>Today it will look like this...</h3>
+		      <img class="stretch" src="img/ghost-christmas.gif">
+		    </section>
+
+		    
+		    <section><h1>AI Past</h1></section>
+
+		    <section><h3>In the 80s AI was...</h3>
+		      <img class="stretch" src="img/80s-dancing.gif">
+		    </section>
+		    
 		    <section>
-		      <h2>Collaborators</h2>
+		      <h3>Expert Systems</h3>
 		      <ul>
-			<li> Dion Bailey and Tom Pajak (News UK)
-			<li> Carlos Rodriguez (Kainano Ltd.)
+			<li> Logical rules
+			<li> Defined by an expert
+			<li> Became very popular in industry in the 80s
 		      </ul>
 		    </section>
-		    <section><h1>Overview</h1></section>
+
+		    <section><h3>They were over-hyped</h3>
+		      <img class="stretch" src="img/hype.gif">
+		    </section>
+
 		    <section>
+		      <h3>The collapse of expert systems</h3>
 		      <ul>
-			<li> Motivation, related work, background
-			<li> Algorithms
+			<li> Expert systems were expensive to maintain
+			<li> Useful only in certain contexts
+			<li> A billion dollar market collapsed
+		      </ul>
+		    </section>
+
+		    <section><h3>This lead to the AI winter</h3>
+		      <img class="stretch" src="img/winter.gif">
+		    </section>
+
+		    <section><h3>Will the same happen with chatbots?</h3></section>
+
+		    <section><h3>Challenge: find the worst chatbot</h3>
+		      <ul>
+			<li> Go to <a href="https://botlist.co/platforms/messenger">https://botlist.co/platforms/messenger</a>
+			<li> Find the worst bot
+			<li> Read us your conversation
+		      </ul>
+		      <img class="stretch" src="img/botlist-link.png">
+		    </section>
+		    
+		    <section><h1>AI Present</h1></section>
+
+		    <section><h3>AI is big</h3>
+		      <img class="stretch" src="img/big-hero.gif">
+		    </section>
+
+		    <section><h3>What's useful for marketers right now?</h3></section>
+
+		    <section><h3>Personalisation</h3>
+		      Tailoring the experience of a user <br>using what we know about them
+		    </section>
+		    
+		    <section>
+		      <h3>Why personalise?</h3>
+		      
+		      <ul>
+			<li> Improve the user experience
+			<li> According to <a href="https://hbr.org/2015/11/how-marketers-can-personalize-at-scale">Harvard Business Review</a>:
 			  <ul>
-			    <li> Real-time content-based recommendations
-			    <li> An algorithm for incremental updates to matrix factorization
-			    <li> Evaluation
+			    <li> 5 to 8 times ROI on marketing spend
+			    <li> Can lift sales by > 10%
 			  </ul>
-			<li> Architecture
-			<li> Application to chatbots
-		      </ul>
-		    </section>
-
-		    <section><h1>Motivation</h1></section>
-		    <section>Personalisation can improve engagement and retention</section>
-		    <section>Need to do this at scale for <i>The Times</i> and <i>The Sun</i></section>
-		    <section>Needs to be fast</section>
-		    <section><img src="img/speed-is-the-key.gif"></section>
-		    <section>Existing algorithms and systems are not suitable</section>
-		    
-		    <section><h1>Related Work</h1></section>
-		    <section>
-		      <ul>
-			<li> <b>Stream-Ranking Matrix Factorization</b>
-			<li> Diaz-Aviles et al. (2012)
-			<li> Users and items must be specified in advance
 		      </ul>
 		    </section>
 		    
+		    <section><h3>Personalisation is valuable</h3>
+		      <img class="stretch" src="img/money.gif">
+		    </section>
+
 		    <section>
+		      <h3>How I helped save <i>The Times</i> £10m</h3>
 		      <ul>
-			<li> <b>xStreams</b>
-			<li> Siddiqui et al. (2014)
-			<li> New users and items can be specified
-			<li> Not using state-of-the-art matrix factorization algorithms
+			<li> Identify users who were likely to unsubscribe
+			<li> Generate personalised recommendations
+			<li> Send them a daily email
 		      </ul>
 		    </section>
+
+		    <section><h3>How does a recommendation engine work?</h3>
+		      <img class="stretch" src="img/matrix-factorization.png">
+		    </section>
+
+		    <section>
+		      <h3>When to use personalised recommendations</h3>
+		      <ul>
+			<li> You have a lot of good quality data
+			<li> You are already using a good baseline (e.g. most popular items)
+			<li> Small margins of improvement have a big impact
+		      </ul>
+		    </section>
+
+		    <section><h3>Garbage in, garbage out</h3>
+		      <img class="stretch" src="img/oscar.gif">
+		    </section>
+
 		    
-		    <section>
-		      <ul>
-			<li> <b>YouTube</b>
-			<li> Covington et al. (2016)
-			<li> Deep learning model using Tensorflow
-			<li> Real-time aspect not described
-		      </ul>
-		    </section>
-		    
-		    <section><h1>Algorithms</h1></section>
-
-		    <section><img width="600" src="img/macron-features.png"></section>
-		    <section><img width="600" src="img/matrix-factorization.png"></section>
-		    <section><img width="600" src="img/matrix-factorization-remove-user.png"></section>
-		    <section><img width="600" src="img/algorithm.png"></section>
-
-		    <section><h1>Experiments</h1></section>
-		    <section><img src="img/batch-sizes.png"></section>
-		    <section><img src="img/dual-core.gif"></section>
-		    <section><img src="img/parallel-batches.png"></section>
-
-		    <section><h1>Architecture</h1></section>
-		    <section><img src="img/recs-architecture.png"></section>
-
-		    <section><h1>Application: chatbots</h1></section>
-		    <section>
-		      <ul>
-			<li> I'd like a pizza.
-			<li> <i> Ok - the aubergine parmigiana again?
-			The portobello mushroom and truffle is also
-			good.</i>
-			<li> Ok, let's try the mushroom.
-			<li> <i> Great. The buffalo mozzarella and
-			smoked tomato salad goes well with that.</i>
-			<li> No thanks.
-			<li> <i> Do you want a Coke to drink like last
-			time? The San Pellegrino Orange is also
-			    popular.</i>
-			<li> Just the Coke, thanks.
-		      </ul>
-		    </section>
-
-		    <section><h1>Conclusion</h1></section>
-		    <section>
-		      <ul>
-			<li> Matrix factorisation is useful
-			<li> Update an existing factorisation using batches
-			<li> Chatbots need personalisation
-		      </ul>
-		    </section>
-		    
-		    <section>
-		      <h1>Thanks!</h1>
-		      <ul>
-			<li><i>Algorithms and architecture for real-time recommendations at News UK</i>
-			<li><a href="https://arxiv.org/abs/1709.05278">https://arxiv.org/abs/1709.05278</a>
-		      </ul>
-		    </section>
 		  </div>
 		</div>
 
